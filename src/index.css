@@ -1,3 +1,65 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles */
+.page-transition {
+    @apply transition-opacity duration-300;
+  }
+  
+  .page-transition-enter {
+    @apply opacity-0;
+  }
+  
+  .page-transition-enter-active {
+    @apply opacity-100;
+  }
+  
+  .page-transition-exit {
+    @apply opacity-100;
+  }
+  
+  .page-transition-exit-active {
+    @apply opacity-0;
+  }
+  
+  /* Additional custom styles */
+  .hover-card {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .button-shadow {
+    @apply shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .input-focus {
+    @apply focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none;
+  }
+  
+  /* Loading spinner animation */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-spinner {
+    @apply animate-spin inline-block w-6 h-6 border-4 border-blue-500 border-t-transparent rounded-full;
+  }
+  
+  /* Toast notification styles */
+  .toast {
+    @apply fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 max-w-md z-50;
+  }
+  
+  .toast-success {
+    @apply bg-green-100 border-l-4 border-green-500 text-green-700;
+  }
+  
+  .toast-error {
+    @apply bg-red-100 border-l-4 border-red-500 text-red-700;
+  }
+  
+  .toast-info {
+    @apply bg-blue-100 border-l-4 border-blue-500 text-blue-700;
+  }
